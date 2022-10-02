@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="technical_skills_db_tree" model="ir.ui.view">
+        <field name="name">technical_skills.db.tree</field>
+        <field name="model">technical_skills.db</field>
+        <field name="arch" type="xml">
+            <tree string="technical_skills">
+                <field name="name"/>
+                <field name="level"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="technical_skills_db" model="ir.ui.view">
+        <field name="name">technical_skills.db.form</field>
+        <field name="model">technical_skills.db</field>
+        <field name="arch" type="xml">
+            <form string="technical_skills">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                        <group>
+                            <field name="level"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+</odoo>
+
+
+
+
+
+
+

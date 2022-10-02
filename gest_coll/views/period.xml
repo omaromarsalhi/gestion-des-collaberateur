@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="period_db_tree" model="ir.ui.view">
+        <field name="name">period.db.tree</field>
+        <field name="model">period.db</field>
+        <field name="arch" type="xml">
+            <tree string="period">
+                <field name="begin_date"/>
+                <field name="end_date"/>
+                <field name="role"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="period_db_form" model="ir.ui.view">
+        <field name="name">period.db.form</field>
+        <field name="model">period.db</field>
+        <field name="arch" type="xml">
+            <form string="period">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="begin_date"/>
+                            <field name="end_date"/>
+                        </group>
+                        <group>
+                            <field name="role"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

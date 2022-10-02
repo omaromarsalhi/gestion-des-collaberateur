@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="collaborateur_db_tree" model="ir.ui.view">
+        <field name="name">collaborateurs.db.tree</field>
+        <field name="model">collaborateurs.db</field>
+        <field name="arch" type="xml">
+            <tree string="Collaborateurs">
+                <field name="name"></field>
+                <field name="email"></field>
+                <field name="contact_number"></field>
+                <field name="gender"></field>
+                <field name="post"></field>
+                <field name="superviser"></field>
+            </tree>
+        </field>
+    </record>
+
+    <record id="collaborateur_db_form" model="ir.ui.view">
+        <field name="name">collaborateurs.db.form</field>
+        <field name="model">collaborateurs.db</field>
+        <field name="arch" type="xml">
+            <form string="Collaborateurs">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"></field>
+                            <field name="email"></field>
+                            <field name="photo"></field>
+                            <field name="date_of_birth"></field>
+                            <field name="contact_number"></field>
+                            <field name="post"></field>
+                            <field name="status"></field>
+                        </group>
+                        <group>
+                            <field name="gender"></field>
+                            <field name="city"></field>
+                            <field name="adress"></field>
+                            <field name="date_of_joining"></field>
+                            <field name="education"></field>
+                            <field name="specialization"></field>
+                            <field name="superviser"></field>
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page string="Soft skills">
+                            <field name="coll_soft_ids">
+                                <tree name="Soft_skills" editable="bottom">
+                                    <field name="coll_soft_id"></field>
+                                    <field name="level"></field>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Technical skills">
+                            <field name="technical_skills_ids"></field>
+                        </page>
+                        <page string="Experience">
+                            <field name="experience_ids"></field>
+                        </page>
+                        <page string="Projects">
+                            <field name="project_ids"></field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="coll_action" model="ir.actions.act_window">
+        <field name="name">Collaborateurs</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">collaborateurs.db</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new product
+            </p>
+        </field>
+    </record>
+
+
+    <menuitem
+            id="first_menu"
+            name="collaborateurs"
+            sequence="0"
+            action="coll_action"
+    />
+</odoo>

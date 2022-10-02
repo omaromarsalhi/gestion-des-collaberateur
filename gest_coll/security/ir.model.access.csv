@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access.collaborateurs.db,access_collaborateurs_db,gest_coll.model_collaborateurs_db,,1,1,1,1
+access.experience.db,access_experience_db,gest_coll.model_experience_db,,1,1,1,1
+access.period.db,access_period_db,gest_coll.model_period_db,,1,1,1,1
+access.projects.db,access_projects_db,gest_coll.model_projects_db,,1,1,1,1
+access.soft_skills.db,access_soft_skills_db,gest_coll.model_soft_skills_db,,1,1,1,1
+access.technical_skills.db,access_technical_skills_db,gest_coll.model_technical_skills_db,,1,1,1,1
+access.coll_soft.db,access_coll_soft_db,gest_coll.model_coll_soft_db,,1,1,1,1

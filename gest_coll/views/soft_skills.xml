@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="soft_skills_db_tree" model="ir.ui.view">
+        <field name="name">soft_skills.db.tree</field>
+        <field name="model">soft_skills.db</field>
+        <field name="arch" type="xml">
+            <tree string="soft_skills">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="soft_skills_db_form" model="ir.ui.view">
+        <field name="name">soft_skills.db.form</field>
+        <field name="model">soft_skills.db</field>
+        <field name="arch" type="xml">
+            <form string="soft_skills">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+      <record id="soft_skills_action" model="ir.actions.act_window">
+        <field name="name">Soft_skills</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">soft_skills.db</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new product
+            </p>
+        </field>
+    </record>
+
+
+    <menuitem
+            id="second_menu"
+            parent="first_menu"
+            name="soft_skills"
+            sequence="0"
+            action="soft_skills_action"
+    />
+</odoo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="coll_soft_db_form" model="ir.ui.view">
+        <field name="name">coll_soft.db.form</field>
+        <field name="model">coll_soft.db</field>
+        <field name="arch" type="xml">
+            <form string="coll_soft">
+                <sheet>
+                    <group>
+                        <field name="coll_soft_id"/>
+                    </group>
+                    <group>
+                        <field name="level"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+</odoo>
